@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input fields for shapes</title>
+	<style>
+		label {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		input[type="number"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+		button[type="submit"] {
+			padding: 8px 20px;
+			background-color: #008CBA;
+			color: white;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+		.output {
+			margin-top: 20px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="/calc">
+		<label for="radius">Enter radius of circle:</label>
+		<input type="number" id="radius" name="radius" placeholder="Enter radius" required>
+		<br>
+
+		<label for="side">Enter side of square:</label>
+		<input type="number" id="side" name="side" placeholder="Enter side" required>
+		<br>
+
+		<label for="length">Enter length of rectangle:</label>
+		<input type="number" id="length" name="length" placeholder="Enter length" required>
+		<br>
+
+		<label for="breadth">Enter breadth of rectangle:</label>
+		<input type="number" id="breadth" name="breadth" placeholder="Enter breadth" required>
+		<br>
+
+		<button type="submit">Calculate</button>
+	</form>
+
+	<div class="output" id="output"></div>
+</body>
+</html>
